@@ -9,7 +9,6 @@ class Student:
         self.__dob=""
         self.__GPA=0
 
-
     def input(self):
         self.__id=input("The student's ID: ")
         self.__name=input("The student's name: ")
@@ -25,7 +24,6 @@ class Student:
         cs.noecho()
         stdscr.refresh()
 
-
     def __str__(self):
         return f"{self.__id} - {self.__name} - {self.__dob}"
 
@@ -33,8 +31,7 @@ class Course:
     def __init__(self):
         self.__id=""
         self.__name=""
-        self.__credits=0
-        
+        self.__credits=0 
 
     def input(self):
         self.__id=input("The course's ID: ")
@@ -51,7 +48,6 @@ class Course:
         cs.noecho()
         stdscr.refresh()
 
-
     def __str__(self):
         return f"{self.__id} - {self.__name}: {self.__credits} credit(s)"
     
@@ -65,8 +61,6 @@ class MarkManager:
         self.__marklist={}
         self.__gpa=[]
         
-
-
 
     def setStudentList(self):
         ns=int(input("Enter the number of students: "))
@@ -90,7 +84,6 @@ class MarkManager:
             self.__students.append(s)
         self.__marklist["Students"]=self.__students
 
-
     def setCourseList(self):
         nc=int(input("Enter the number of courses: "))
         for i in range(nc):
@@ -112,7 +105,6 @@ class MarkManager:
             c.input_curses(stdscr)
             self.__courses.append(c)
         self.__marklist["Courses"]=self.__courses
-
 
     def setMarkList(self):
         choosecourse=int(input("Select the course to mark the students: "))
@@ -192,6 +184,7 @@ class MarkManager:
         total_marks=np.sum(total_marks,axis=0)
         total_credits=np.sum(credits)
         self.__gpa=np.divide(total_marks,total_credits)
+
     def sortGPAlist(self):
         keys=[str(student) for student in self.__students]
         values=[math.floor(i*10)/10 for i in self.__gpa]
@@ -238,7 +231,6 @@ class MarkManager:
         stdscr.addstr(n+2,1,"Press any key to continue")
         stdscr.getch()
         stdscr.refresh()
-
 
     def displayCourses(self):
         print("All the courses in this class are: ")
@@ -301,8 +293,6 @@ class MarkManager:
             if (cont == "Y" or cont =="N"):
                 break
         return cont
-
-
 
 
 """m.setStudentList()
