@@ -4,7 +4,7 @@ def getNumStudent():
 def getStudentInfo():
     id=input("The student's id: ")
     name=input("The student's name: ")
-    dob=input("The students'DoB: ")
+    dob=input("The students' DoB: ")
     info=id+"-"+name+"-"+dob
     return info
 
