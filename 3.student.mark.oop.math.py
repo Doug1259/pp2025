@@ -310,6 +310,7 @@ while True:
 m.setGPAlist()
 m.sortGPAlist()"""
 
+
 def main(stdscr):
     stdscr.clear()
     m = MarkManager()
