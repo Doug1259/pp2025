@@ -244,6 +244,7 @@ class MarkManager:
                 break
         return cont
 
+
 def initClass():
     mm=MarkManager()
     return mm
